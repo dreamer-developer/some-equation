@@ -10,10 +10,6 @@ class EquationTest
     EquationTest(){       
     };
 
-    void showText() {
-        cout << "Stupid test!!" << endl;
-    }
-
     void test1()
     {
         double a = 1;
@@ -22,10 +18,10 @@ class EquationTest
 
         //cout << "test1" << " " << equation.solveEquation(a,b,c,eps);
 
-        if (std::isnan(equation.solveEquation(a,b,c,eps))){
-            cout << "x^2-1 = 0 не имеет корней.";
-        //assert(!std::isnan(equation.solveEquation(a,b,c,eps)));
-        } 
+//        if (std::isnan(equation.solveEquation(a,b,c,eps))){
+//            cout << "x^2-1 = 0 не имеет корней.";
+        assert(!std::isnan(equation.solveEquation(a,b,c,eps)));
+//        } 
     }
 
     private:
