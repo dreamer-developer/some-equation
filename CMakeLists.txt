@@ -7,7 +7,7 @@ include(CTest)
 
 # Создаем директории для исходного кода и тестов
 set(SOURCE_FILES main.cpp)
-set(TEST_FILES test1.cpp)
+set(TEST_FILES Test1.cpp)
 
 # Указываем, что мы хотим скомпилировать тесты
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
