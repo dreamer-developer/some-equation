@@ -4,7 +4,7 @@ int main() {
     int a = 2;
     int b = 2;
 
-    if (a + b == 4) {
+    if (a + b == 5) {
         std::cout << "Тест пройден успешно!" << std::endl;
     } else {
         std::cerr << "Тест провален!" << std::endl;
