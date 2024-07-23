@@ -1,15 +1,24 @@
 #include <iostream>
+#include "Equation.h"
+
+using namespace std;
 
 int main() {
-    int a = 2;
-    int b = 2;
 
-    if (a + b == 5) {
-        std::cout << "Тест пройден успешно!" << std::endl;
-    } else {
-        std::cerr << "Тест провален!" << std::endl;
-        return 1; // Возвращаем ненулевой код, чтобы указать на провал теста
-    }
+        double a = 1;
+        double b = 0;
+        double c = 1;
+        double eps = 0.001;
+        Equation equation;
 
-    return 0; // Возвращаем нулевой код, если тест пройден
+        if (std::isnan(equation.solveEquation(a,b,c,eps))){
+            cout << "x^2-1 = 0 не имеет корней. Тест пройден." << std::endl;
+        //assert(!std::isnan(equation.solveEquation(a,b,c,eps)));
+        } 
+        else {
+            std::cerr << "Тест провален!" << std::endl;
+            return 1;
+        }
+
+    return 0;
 }
