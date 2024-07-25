@@ -16,9 +16,6 @@ add_executable(test3 Test3.cpp)
 add_executable(test4 Test4.cpp)
 add_executable(test5 Test5.cpp)
 
-# Связываем тесты с библиотеками, которые они используют
-#target_link_libraries(test1 ...) # Замените ... на зависимости теста 1
-
 # Указываем, что мы хотим запустить тесты
 
 enable_testing()
@@ -30,13 +27,4 @@ add_test(NAME test5 COMMAND test5)
 
 # Устанавливаем переменную CTEST_OUTPUT_ON_FAILURE, чтобы увидеть вывод тестов при неудачном завершении
 set(CTEST_OUTPUT_ON_FAILURE ON)
-
-#add_executable(EquationTest main.cpp)
-#target_sources(EquationTest PRIVATE main.cpp)
-#include(CTest)
-#enable_testing()
-#add_test(
-#    NAME EquationTest
-#    COMMAND EquationTest
-#)
 

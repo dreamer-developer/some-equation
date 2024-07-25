@@ -32,6 +32,7 @@ class Equation {
         
         return result_vec;
     };
+    
     //Перегрузка базового метода solve для проверки входных коэффициентов, 
     //которые не являются числами.
     template<typename T>
