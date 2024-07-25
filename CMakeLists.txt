@@ -7,11 +7,14 @@ include(CTest)
 
 # Создаем директории для исходного кода и тестов
 set(SOURCE_FILES main.cpp)
-set(TEST_FILES Test1.cpp)
 
 # Указываем, что мы хотим скомпилировать тесты
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
-add_executable(test1 ${TEST_FILES})
+add_executable(test1 Test1.cpp)
+add_executable(test2 Test2.cpp)
+add_executable(test3 Test3.cpp)
+add_executable(test4 Test4.cpp)
+add_executable(test5 Test5.cpp)
 
 # Связываем тесты с библиотеками, которые они используют
 #target_link_libraries(test1 ...) # Замените ... на зависимости теста 1
@@ -20,6 +23,10 @@ add_executable(test1 ${TEST_FILES})
 
 enable_testing()
 add_test(NAME test1 COMMAND test1)
+add_test(NAME test2 COMMAND test2)
+add_test(NAME test3 COMMAND test3)
+add_test(NAME test4 COMMAND test4)
+add_test(NAME test5 COMMAND test5)
 
 # Устанавливаем переменную CTEST_OUTPUT_ON_FAILURE, чтобы увидеть вывод тестов при неудачном завершении
 set(CTEST_OUTPUT_ON_FAILURE ON)

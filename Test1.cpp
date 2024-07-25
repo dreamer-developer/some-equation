@@ -3,6 +3,7 @@
 
 using namespace std;
 
+//тест, который проверяет, что для уравнения x^2+1 = 0 корней нет (возвращается пустой массив)
 int main() {
 
         double a = 1;
@@ -11,9 +12,8 @@ int main() {
         double eps = 0.001;
         Equation equation;
 
-        if (std::isnan(equation.solveEquation(a,b,c,eps))){
-            cout << "x^2-1 = 0 не имеет корней. Тест пройден." << std::endl;
-        //assert(!std::isnan(equation.solveEquation(a,b,c,eps)));
+        if (equation.solve(a,b,c,eps).empty()){
+            cout << "x^2+1 = 0 не имеет корней. Тест пройден." << std::endl;
         } 
         else {
             std::cerr << "Тест провален!" << std::endl;
